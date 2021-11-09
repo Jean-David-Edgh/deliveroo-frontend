@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Category from "./components/Category";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 
 function App() {
   const [data, setData] = useState();
@@ -39,6 +40,7 @@ function App() {
           )
         );
       })}
+      <Cart />
       <Footer />
     </div>
   );
