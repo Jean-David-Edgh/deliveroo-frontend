@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [data, setData] = useState();
@@ -28,6 +30,7 @@ function App() {
     <p>En cours de chargement...</p>
   ) : (
     <div>
+      <Header />
       <Hero restaurant={data.restaurant} />
       {data.categories.map((category, index) => {
         return (
@@ -36,6 +39,7 @@ function App() {
           )
         );
       })}
+      <Footer />
     </div>
   );
 }
